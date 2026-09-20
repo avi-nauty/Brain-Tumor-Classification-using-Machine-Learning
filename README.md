@@ -2,7 +2,7 @@
 
 > A deep learning research project for binary classification of brain MRI scans (Tumor vs. Healthy) using fused CNN feature extraction, Black Hole Optimization (BHO) feature selection, and a custom Optimized SGD Logistic Regression classifier.
 
-📄 **Paper submitted to IEEE Intelligent Systems — awaiting first round of review**
+📄 **Paper submitted to Springer Nature — awaiting first round of review**
 
 ---
 
