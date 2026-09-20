@@ -217,7 +217,7 @@ This work was conducted as a Master of Science research project at **Lakehead Un
 
 - **Supervisor:** Dr. Hosam El-Ocla, PhD, P. Eng.
 Associate Professor, Department of Computer Science, Lakehead University, Thunder Bay, ON, Canada.
-- **Paper:** Submitted to **IEEE Intelligent Systems** — currently awaiting first round of review
+- **Paper:** Submitted to **Springer Nature** — currently awaiting first round of review
 
 ---
 
