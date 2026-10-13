@@ -5,6 +5,7 @@ build/
 dist/
 wheels/
 *.egg-info
+demo_logic.md
 
 # Virtual environments
 .venv
