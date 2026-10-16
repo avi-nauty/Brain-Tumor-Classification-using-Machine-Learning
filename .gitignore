@@ -1,0 +1,27 @@
+# Python cache and compiled files
+__pycache__/
+*.py[oc]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS and editors
+.DS_Store
+.vscode/
+.idea/
+
+# Secrets (never commit these)
+.env
+*.key
+*.pem
+
+# Python packaging
+build/
+dist/
+wheels/
+*.egg-info
