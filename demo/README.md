@@ -103,3 +103,7 @@ The build runs remotely on Google Cloud Build using the Dockerfile. `--max-insta
 ## Implementation note
 
 Pixel values are scaled to the 0 to 1 range before each backbone's own `preprocess_input`, which was designed for 0 to 255 input. This was done consistently at training and test time, and the saved scalers, feature selection and classifier all depend on features produced this way, so the demo keeps it exactly. Do not "fix" it.
+
+
+
+This is a test for the google cloud run via github actions
