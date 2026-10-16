@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+demo_logic.md
+
+# Virtual environments
+.venv
+
+# macOS
+.DS_Store
+
+# Local-only reference data: keep just the two files the check script needs
+reference/*
+!reference/X_test_fused.npy
+!reference/y_test.npy
