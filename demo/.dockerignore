@@ -1,0 +1,27 @@
+# Keep the 96M reference/ folder out of the build context (local only)
+reference/
+
+# Version control and environments
+.git
+.gitignore
+.venv
+venv
+env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Notebooks and checkpoints
+*.ipynb
+.ipynb_checkpoints/
+
+# Editor and OS files
+.DS_Store
+.vscode/
+.idea/
+
+# Docker files themselves
+Dockerfile
+.dockerignore
