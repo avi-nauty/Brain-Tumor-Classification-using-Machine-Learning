@@ -14,6 +14,8 @@ import inference
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
+MAX_UPLOAD_MB = 10
+
 DISCLAIMER = (
     "**Research demo only. Not a medical device and not for diagnosis.** "
     "Results should never be used to make medical decisions."
@@ -58,7 +60,7 @@ with gr.Blocks(title="Brain Tumor MRI Classifier") as demo:
 
     with gr.Row():
         with gr.Column():
-            image = gr.Image(type="filepath", label="MRI image")
+            image = gr.Image(type="filepath", label=f"MRI image (PNG or JPG, max {MAX_UPLOAD_MB} MB)")
             button = gr.Button("Classify", variant="primary")
         with gr.Column():
             result = gr.Markdown()
@@ -72,4 +74,4 @@ with gr.Blocks(title="Brain Tumor MRI Classifier") as demo:
     button.click(classify, inputs=image, outputs=result)
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(max_file_size=f"{MAX_UPLOAD_MB}mb")
