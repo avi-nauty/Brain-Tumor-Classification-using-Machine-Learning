@@ -22,14 +22,24 @@ DISCLAIMER = (
 )
 
 METHOD = """
-Each image is passed through three pretrained CNNs (ResNet50, VGG16, EfficientNetB0).
-Their features are fused into one vector of 3,840 numbers, standardized, and reduced
-to 1,938 features chosen by Black Hole Optimization. A logistic classifier trained
-with Opt-SGD then outputs a tumor probability.
+This app classifies a brain MRI image as showing a possible tumor or not, using the pipeline from my graduate research.
 
-The decision threshold is **0.30**, not the usual 0.50. It is set low on purpose so the
-model errs toward flagging a possible tumor rather than missing one, which means some
-healthy scans will be flagged as well.
+### How it works
+1. **Feature extraction.** The image goes through three pretrained CNNs: ResNet50, VGG16 and EfficientNetB0. Each one summarizes the image as a list of numbers.
+2. **Fusion.** The three lists (2,048 + 512 + 1,280 numbers) are joined into one vector of 3,840 features and standardized so all features are on a comparable scale.
+3. **Feature selection.** Black Hole Optimization, a metaheuristic search algorithm, keeps 1,938 of those features and drops the rest.
+4. **Classification.** A logistic classifier trained with Optimized Stochastic Gradient Descent turns the selected features into a tumor probability.
+
+### Why the threshold is 0.30
+Most classifiers flag a case above 0.50. This one flags a possible tumor above 0.30. The threshold is low on purpose, because missing a tumor is costlier than raising a false alarm. The trade-off is that some healthy scans will be flagged as well.
+
+### Using the demo
+Upload an MRI image (PNG or JPG, up to 10 MB) or pick one of the examples. Please don't upload images that could identify a real patient.
+
+### Limitations
+- This is a research prototype and has not been clinically validated.
+- It looks at one 2D image at a time, not a full scan series or patient history.
+- It may be less reliable on images unlike its training data, such as other scanners, sequences or image quality.
 """
 
 
