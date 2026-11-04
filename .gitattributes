@@ -1,0 +1,2 @@
+# Exclude notebooks from the GitHub language bar so the Python code in demo/ shows up
+*.ipynb linguist-vendored
