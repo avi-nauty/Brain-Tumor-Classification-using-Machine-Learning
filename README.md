@@ -4,6 +4,8 @@
 
 📄 **Paper submitted to Springer Nature — awaiting first round of review**
 
+_Last updated: November 2026_
+
 ---
 
 ## 📌 Overview
